@@ -1,0 +1,62 @@
+<html>
+<head>
+  <style>
+ h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  margin: 20px;
+  border: none;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+}
+
+#si {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#no {
+  background-color: #F44336;
+  color: white;
+  position: relative;
+}
+
+  </style>
+  <script>
+    window.onload = function() {
+      var no = document.getElementById("no");
+      var si = document.getElementById("si");
+      var x0 = no.offsetLeft;
+      var y0 = no.offsetTop;
+      no.addEventListener("mouseover", function() {
+        var x = Math.floor(Math.random() * 400 - 200) + x0;
+        var y = Math.floor(Math.random() * 400 - 200) + y0;
+        no.style.left = x + "px";
+        no.style.top = y + "px";
+      });
+      si.addEventListener("click", function() {
+        alert("Siempre lo supe Judas");
+      });
+    };
+  </script>
+</head>
+<body>
+  <h1>¿Quieres que me vaya?</h1>
+  <div id="container">
+    <button id="si">Sí</button>
+    <button id="no">No</button>
+  </div>
+</body>
+</html>
